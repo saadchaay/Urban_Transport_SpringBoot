@@ -1,13 +1,13 @@
-package com.urban.vautservice;
+package com.urban.vaultservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class VautServiceApplication {
+public class VaultServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(VautServiceApplication.class, args);
+		SpringApplication.run(VaultServiceApplication.class, args);
 	}
 
 }

@@ -1,10 +1,10 @@
-package com.urban.vautservice;
+package com.urban.vaultservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class VautServiceApplicationTests {
+class VaultServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

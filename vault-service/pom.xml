@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.urban</groupId>
-	<artifactId>vaut-service</artifactId>
+	<artifactId>vault-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>vaut-service</name>
+	<name>vault-service</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>

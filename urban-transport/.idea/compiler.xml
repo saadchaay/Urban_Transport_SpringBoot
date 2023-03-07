@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -12,9 +13,12 @@
         <module name="users-service" />
         <module name="vehicle-service" />
         <module name="gateway-service" />
-        <module name="vaut-service" />
+        <module name="vault-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="vaut-service" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -22,6 +26,7 @@
       <module name="delivery-service" options="-parameters" />
       <module name="gateway-service" options="-parameters" />
       <module name="users-service" options="-parameters" />
+      <module name="vault-service" options="-parameters" />
       <module name="vaut-service" options="-parameters" />
       <module name="vehicle-service" options="-parameters" />
     </option>

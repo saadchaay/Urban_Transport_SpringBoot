@@ -1,4 +1,4 @@
-package com.urban.usersservice.services;
+package com.urban.usersservice.services.restClient;
 
 import com.urban.usersservice.models.Vehicle;
 import org.springframework.cloud.openfeign.FeignClient;

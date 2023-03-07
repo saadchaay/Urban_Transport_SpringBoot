@@ -2,6 +2,8 @@ package com.urban.usersservice.services.transporter;
 
 import com.urban.usersservice.dtos.PersonInputDto;
 import com.urban.usersservice.dtos.PersonOutputDto;
+import com.urban.usersservice.dtos.transporter.TransporterInputDto;
+import com.urban.usersservice.dtos.transporter.TransporterOutputDto;
 import com.urban.usersservice.exceptions.IncompleteInfos;
 import com.urban.usersservice.exceptions.PersonFieldExistException;
 import com.urban.usersservice.exceptions.PersonNotFoundException;
@@ -19,24 +21,22 @@ public class TransporterServiceImpl implements TransporterService {
     private TransporterRepository repository;
 
     @Override
-    public List<PersonOutputDto> listAll() {
-        List<PersonOutputDto> personDto;
-//        personDto = repository.findAll();
+    public List<TransporterOutputDto> listAll() {
         return null;
     }
 
     @Override
-    public PersonOutputDto addTransporter(PersonInputDto transporter) throws IncompleteInfos, PersonFieldExistException {
+    public TransporterOutputDto addTransporter(TransporterInputDto transporter) throws IncompleteInfos, PersonFieldExistException {
         return null;
     }
 
     @Override
-    public PersonOutputDto updateTransporter(Long transId, PersonInputDto transporter) throws IncompleteInfos, PersonFieldExistException, PersonNotFoundException {
+    public TransporterOutputDto updateTransporter(Long transId, TransporterInputDto transporter) throws IncompleteInfos, PersonFieldExistException, PersonNotFoundException {
         return null;
     }
 
     @Override
-    public PersonOutputDto searchTransporter(Long transId) throws PersonNotFoundException {
+    public TransporterOutputDto searchTransporter(Long transId) throws PersonNotFoundException {
         return null;
     }
 

@@ -10,8 +10,8 @@
     <file url="file://$PROJECT_DIR$/../keycloak-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../users-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../users-service/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../vaut-service/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../vaut-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../vault-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../vault-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../vehicle-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../vehicle-service/src/main/resources" charset="UTF-8" />
   </component>

@@ -1,19 +1,13 @@
 package com.urban.usersservice;
 
 import com.urban.usersservice.entities.Transporter;
-import com.urban.usersservice.entities.person.PersonData;
 import com.urban.usersservice.models.Vehicle;
 import com.urban.usersservice.repos.TransporterRepository;
-import com.urban.usersservice.repos.UserRepository;
-import com.urban.usersservice.services.VehicleRestClientService;
+import com.urban.usersservice.services.restClient.VehicleRestClientService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.context.annotation.Bean;
-
-import java.util.Collection;
 
 @SpringBootApplication
 @EnableFeignClients
