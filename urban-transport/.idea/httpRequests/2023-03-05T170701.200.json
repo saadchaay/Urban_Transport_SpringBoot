@@ -1,0 +1,19 @@
+{
+  "_embedded": {
+    "vehicles": []
+  },
+  "_links": {
+    "self": {
+      "href": "http://host.docker.internal:8072/vehicles"
+    },
+    "profile": {
+      "href": "http://host.docker.internal:8072/profile/vehicles"
+    }
+  },
+  "page": {
+    "size": 20,
+    "totalElements": 0,
+    "totalPages": 0,
+    "number": 0
+  }
+}

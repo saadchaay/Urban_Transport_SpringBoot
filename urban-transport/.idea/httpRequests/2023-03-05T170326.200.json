@@ -1,0 +1,18 @@
+{
+  "name": "vehcile-service",
+  "profiles": [
+    "vehicle-test"
+  ],
+  "label": null,
+  "version": "449b2d8c19d36ee58cafe49d544c36fd2552d46c",
+  "state": null,
+  "propertySources": [
+    {
+      "name": "file:///C:/Users/ssaad_chaay/Desktop/UrbanTransport_app/server/urban-transport/config-repo/application.properties",
+      "source": {
+        "global.params.x": "34400",
+        "global.params.y": "5000"
+      }
+    }
+  ]
+}

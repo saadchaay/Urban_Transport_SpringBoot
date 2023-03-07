@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ccc01e41-40d4-4060-be7f-696082634052" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/entities/Delivery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keycloak-service/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../keycloak-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../urbanFrontAngular/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../urbanFrontAngular/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../urbanFrontAngular/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../urbanFrontAngular/src/app/app.module.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2MKSTZllehYg1nIeJAQXDdlYSuj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "jdk.selected.JAVA_MODULE": "openjdk-19 (2)",
+    "last_directory_selection": "C:/Users/ssaad_chaay/Desktop/UrbanTransport_app/server/users-service/src/main/java/com/urban/usersservice/services",
+    "last_opened_file_path": "C:/Users/ssaad_chaay/Desktop/UrbanTransport_app/server/vaut-service",
+    "nodejs_package_manager_path": "npm",
+    "show.migrate.to.gradle.popup": "false",
+    "spring.configuration.checksum": "31ddb4cce681a702f7081a60b4ac12e9"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ssaad_chaay\Desktop\UrbanTransport_app\server\users-service" />
+      <recent name="C:\Users\ssaad_chaay\Desktop\UrbanTransport_app\server\urban-transport\config-repo" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.urban.usersservice.entities.projections" />
+      <recent name="com.urban.usersservice.services.transporter" />
+      <recent name="com.urban.usersservice.exceptions" />
+      <recent name="com.urban.usersservice.services.user" />
+      <recent name="com.urban.usersservice.repos" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.UsersServiceApplication">
+    <configuration name="rest-api_1 | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="ConfigServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="config-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.urban.configservice.ConfigServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeliveryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="delivery-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.urban.deliveryservice.DeliveryServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gateway-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.urban.gatewayservice.GatewayServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsersServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="users-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.urban.usersservice.UsersServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VautServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="vaut-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.urban.vautservice.VautServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VehicleServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="vehicle-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.urban.vehicleservice.VehicleServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.rest-api_1 | #1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ccc01e41-40d4-4060-be7f-696082634052" name="Changes" comment="" />
+      <created>1677514795334</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677514795334</updated>
+      <workItem from="1677514797463" duration="7642000" />
+      <workItem from="1677577473112" duration="2303000" />
+      <workItem from="1677757763722" duration="3912000" />
+      <workItem from="1677835046308" duration="118000" />
+      <workItem from="1677844480939" duration="12670000" />
+      <workItem from="1678022998651" duration="20230000" />
+      <workItem from="1678102117761" duration="12728000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

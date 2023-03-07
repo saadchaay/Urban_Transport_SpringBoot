@@ -1,0 +1,75 @@
+GET http://localhost:8077/person-config
+Accept: application/json
+
+<> 2023-03-06T180811.200.json
+
+###
+
+GET http://localhost:9999/vehicle-service/vehicles
+Accept: application/json
+
+<> 2023-03-05T170814.200.json
+
+###
+
+GET http://localhost:9999/vehicle-service/vehicles/1
+Accept: application/json
+
+###
+
+GET http://localhost:9999/vehicle-service/vehicles
+Accept: application/json
+
+<> 2023-03-05T170755.200.json
+
+###
+
+GET http://localhost:9999/vehicle-service/vehicles
+Accept: application/json
+
+<> 2023-03-05T170701.200.json
+
+###
+
+GET http://localhost:9999/vehicle-service/vehicle-test
+Accept: application/json
+
+<> 2023-03-05T170605.200.json
+
+###
+
+GET http://localhost:9999/vehcile-service/vehicle-test
+Accept: application/json
+
+<> 2023-03-05T170509.404.json
+
+###
+
+GET http://localhost:9999/vehcile-service/vehicle-test
+Accept: application/json
+
+<> 2023-03-05T170500.404.json
+
+###
+
+GET http://localhost:9999/vehcile-service/vehicle-test
+Accept: application/json
+
+<> 2023-03-05T170455.404.json
+
+###
+
+GET http://localhost:8888/vehcile-service/default
+Accept: application/json
+
+<> 2023-03-05T170409.200.json
+
+###
+
+GET http://localhost:8888/vehcile-service/vehicle-test
+Accept: application/json
+
+<> 2023-03-05T170326.200.json
+
+###
+
