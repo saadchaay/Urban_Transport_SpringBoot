@@ -8,6 +8,7 @@ import com.urban.usersservice.exceptions.PersonFieldExistException;
 import com.urban.usersservice.exceptions.PersonNotFoundException;
 import com.urban.usersservice.mappers.UserMapper;
 import com.urban.usersservice.repos.UserRepository;
+import com.urban.usersservice.utils.KeycloakUtil;
 import com.urban.usersservice.utils.TransporterUtil;
 import com.urban.usersservice.utils.UserUtil;
 import lombok.AllArgsConstructor;
@@ -41,7 +42,7 @@ public class UserServiceImpl implements UserService{
             throw new PersonFieldExistException("The identity is already exists!");
 
         User user = UserUtil.setUserAttributes(userDto);
-        //        Add Keycloak Part here .......
+        KeycloakUtil.createKeycloakUserWithRole(userDto, user.getPassword());
 
         return userMapper.fromUserEntity(repository.save(user));
     }

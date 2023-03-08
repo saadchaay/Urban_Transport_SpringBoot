@@ -1,13 +1,18 @@
 package com.urban.usersservice;
 
+import com.urban.usersservice.dtos.transporter.TransporterInputDto;
+import com.urban.usersservice.dtos.transporter.TransporterOutputDto;
 import com.urban.usersservice.entities.Transporter;
+import com.urban.usersservice.mappers.TransporterMapper;
 import com.urban.usersservice.models.Vehicle;
 import com.urban.usersservice.repos.TransporterRepository;
 import com.urban.usersservice.services.restClient.VehicleRestClientService;
+import com.urban.usersservice.utils.KeycloakUtil;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 @EnableFeignClients
@@ -18,13 +23,9 @@ public class UsersServiceApplication {
 	}
 
 //	@Bean
-	CommandLineRunner start(
-			TransporterRepository tranRepos,
-			VehicleRestClientService vehClServ){
+	CommandLineRunner start(){
 		return args -> {
-			Vehicle vehicle = vehClServ.getVehicle(1L);
-			System.out.println(vehicle.getIdentify());
-			Transporter transporter = Transporter
+			TransporterInputDto transporter = TransporterInputDto
 					.builder()
 					.name("saad")
 					.phone("+212615207417")
@@ -33,10 +34,10 @@ public class UsersServiceApplication {
 					.address("Bouskoura")
 					.picture("my_picture")
 					.password("my_password")
-					.vehicleId(vehicle.getId())
 					.build();
-			Transporter saveOne = tranRepos.save(transporter);
-			System.out.println(saveOne);
+			KeycloakUtil.createKeycloakTransporterWithRole(transporter, transporter.getPassword());
+//			Transporter saveOne = tranRepos.save(transporter);
+//			System.out.println(saveOne);
 		};
 	}
 }

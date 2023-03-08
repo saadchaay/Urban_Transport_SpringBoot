@@ -13,8 +13,10 @@ import com.urban.usersservice.mappers.TransporterMapper;
 import com.urban.usersservice.models.Vehicle;
 import com.urban.usersservice.repos.TransporterRepository;
 import com.urban.usersservice.services.restClient.VehicleRestClientService;
+import com.urban.usersservice.utils.KeycloakUtil;
 import com.urban.usersservice.utils.TransporterUtil;
 import lombok.AllArgsConstructor;
+import org.keycloak.admin.client.Keycloak;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -59,6 +61,8 @@ public class TransporterServiceImpl implements TransporterService {
         if(vehicle != null) {
             transporter.setVehicleId(vehicle.getId());
             transporter.setVehicle(vehicle);
+            System.out.println("inside implement trans vehicle");
+            KeycloakUtil.createKeycloakTransporterWithRole(transporterDto, transporter.getPassword());
             return transporterMapper.fromTransporterEntity(repository.save(transporter));
         }
         return null;

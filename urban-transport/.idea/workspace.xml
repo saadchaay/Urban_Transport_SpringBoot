@@ -6,18 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="ccc01e41-40d4-4060-be7f-696082634052" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../keycloak-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-service/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/dtos/PersonOutputDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/dtos/PersonOutputDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../users-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/UsersServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/UsersServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/dtos/PersonInputDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/dtos/PersonInputDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/dtos/transporter/TransporterInputDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/dtos/transporter/TransporterInputDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/dtos/users/UserOutputDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/dtos/users/UserOutputDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/exceptions/PersonNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/exceptions/PersonNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/repos/TransporterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/repos/TransporterRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/repos/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/repos/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/services/restClient/VehicleRestClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/services/restClient/VehicleRestClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/security/KeycloakConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/security/KeycloakConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/services/transporter/TransporterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/services/transporter/TransporterServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/services/user/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/services/user/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/utils/TransporterUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/utils/TransporterUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/web/PersonsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/web/TransporterRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vehicle-service/src/main/java/com/urban/vehicleservice/web/VehicleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vehicle-service/src/main/java/com/urban/vehicleservice/web/VehicleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../users-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../urbanFrontAngular/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../urbanFrontAngular/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../urbanFrontAngular/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../urbanFrontAngular/src/app/app.module.ts" afterDir="false" />
     </list>
@@ -67,15 +63,19 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "dart.analysis.tool.window.visible": "false",
+    "extract.method.default.visibility": "private",
     "jdk.selected.JAVA_MODULE": "openjdk-19 (2)",
     "last_directory_selection": "C:/Users/ssaad_chaay/Desktop/UrbanTransport_app/server/users-service/src/main/java/com/urban/usersservice/services",
     "last_opened_file_path": "C:/Users/ssaad_chaay/Desktop/UrbanTransport_app/server/users-service/src/main/java/com/urban/usersservice/dtos/users",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "show.migrate.to.gradle.popup": "false",
-    "spring.configuration.checksum": "31ddb4cce681a702f7081a60b4ac12e9"
+    "spring.configuration.checksum": "d68de4adb8b65e1ccca65cd314d7371a"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.urban.usersservice.utils" />
@@ -86,11 +86,11 @@
       <recent name="C:\Users\ssaad_chaay\Desktop\UrbanTransport_app\server\urban-transport\config-repo" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.urban.usersservice.security" />
+      <recent name="com.urban.usersservice.utils" />
       <recent name="com.urban.usersservice.mappers" />
       <recent name="com.urban.usersservice.web" />
       <recent name="com.urban.usersservice.services.user" />
-      <recent name="com.urban.usersservice.dtos.transporter" />
-      <recent name="com.urban.vaultservice.web" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -166,7 +166,8 @@
       <workItem from="1677835046308" duration="118000" />
       <workItem from="1677844480939" duration="12670000" />
       <workItem from="1678022998651" duration="20230000" />
-      <workItem from="1678102117761" duration="34475000" />
+      <workItem from="1678102117761" duration="37201000" />
+      <workItem from="1678266334169" duration="20425000" />
     </task>
     <servers />
   </component>
