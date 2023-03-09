@@ -21,7 +21,7 @@ services:
       DB_SCHEMA: public
       DB_USER: my_admin
       DB_PASSWORD: my_password
-#      KEYCLOAK_HOSTNAME: keycloakservice
+#      KEYCLOAK_HOSTNAME: keycloak
       KEYCLOAK_USER: kc_admin
       KEYCLOAK_PASSWORD: kc_password
     ports:

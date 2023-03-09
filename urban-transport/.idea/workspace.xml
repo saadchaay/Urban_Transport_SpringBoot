@@ -7,12 +7,9 @@
     <list default="true" id="ccc01e41-40d4-4060-be7f-696082634052" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../keycloak-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-service/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../users-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/UsersServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/UsersServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/dtos/PersonInputDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/dtos/PersonInputDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/dtos/transporter/TransporterInputDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/dtos/transporter/TransporterInputDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/security/KeycloakConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/security/KeycloakConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/security/KeycloakSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/security/KeycloakSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/services/transporter/TransporterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/services/transporter/TransporterServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/services/user/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/services/user/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/utils/KeycloakUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/utils/KeycloakUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../users-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../urbanFrontAngular/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../urbanFrontAngular/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../urbanFrontAngular/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../urbanFrontAngular/src/app/app.module.ts" afterDir="false" />
@@ -32,6 +29,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HttpClientSelectedEnvironments">
+    <file url="file://$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http" />
   </component>
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
@@ -104,6 +104,9 @@
     <configuration name="rest-api_1 | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
+    <configuration name="rest-api_1 | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="ConfigServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="config-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.urban.configservice.ConfigServiceApplication" />
@@ -149,6 +152,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="HTTP Request.rest-api_1 | #1" />
+        <item itemvalue="HTTP Request.rest-api_1 | #2" />
       </list>
     </recent_temporary>
   </component>
@@ -167,7 +171,7 @@
       <workItem from="1677844480939" duration="12670000" />
       <workItem from="1678022998651" duration="20230000" />
       <workItem from="1678102117761" duration="37201000" />
-      <workItem from="1678266334169" duration="20425000" />
+      <workItem from="1678266334169" duration="33900000" />
     </task>
     <servers />
   </component>

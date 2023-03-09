@@ -23,7 +23,6 @@ public class KeycloakUtil {
                 .grantType("password")
                 .realm("urban-transport")
                 .clientId("urban-client")
-                .clientSecret("570W8ZQn7HR5lJUGq8R2af1l4yUdqaCa")
                 .username("full-admin")
                 .password("admin123")
                 .build();

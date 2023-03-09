@@ -1,11 +1,8 @@
 package com.urban.usersservice.services.transporter;
 
-import com.urban.usersservice.dtos.PersonInputDto;
-import com.urban.usersservice.dtos.PersonOutputDto;
 import com.urban.usersservice.dtos.transporter.TransporterInputDto;
 import com.urban.usersservice.dtos.transporter.TransporterOutputDto;
 import com.urban.usersservice.entities.Transporter;
-import com.urban.usersservice.entities.person.PersonData;
 import com.urban.usersservice.exceptions.IncompleteInfos;
 import com.urban.usersservice.exceptions.PersonFieldExistException;
 import com.urban.usersservice.exceptions.PersonNotFoundException;
@@ -16,11 +13,9 @@ import com.urban.usersservice.services.restClient.VehicleRestClientService;
 import com.urban.usersservice.utils.KeycloakUtil;
 import com.urban.usersservice.utils.TransporterUtil;
 import lombok.AllArgsConstructor;
-import org.keycloak.admin.client.Keycloak;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -34,10 +29,12 @@ public class TransporterServiceImpl implements TransporterService {
     @Override
     public List<TransporterOutputDto> listAll() {
         List<Transporter> list = repository.findAll();
-        for (int i=0; i<list.size(); i++){
-            Transporter transporter = repository.findById(list.get(i).getVehicleId()).get();
-            Vehicle vehicle = vehClServ.getVehicle(transporter.getVehicleId());
-            list.get(i).setVehicle(vehicle);
+        for (Transporter tr : list) {
+            Transporter transporter = repository.findById(tr.getId()).orElse(null);
+            if (transporter != null) {
+                Vehicle vehicle = vehClServ.getVehicle(transporter.getVehicleId());
+                tr.setVehicle(vehicle);
+            }
         }
         return list.stream().map(transporterMapper::fromTransporterEntity).toList();
     }
@@ -55,8 +52,6 @@ public class TransporterServiceImpl implements TransporterService {
 
         Transporter transporter = TransporterUtil.setTransportAttributes(transporterDto);
         Vehicle vehicle = vehClServ.addVehicle(transporter.getVehicle());
-
-        //        Add Keycloak Part here .......
 
         if(vehicle != null) {
             transporter.setVehicleId(vehicle.getId());
