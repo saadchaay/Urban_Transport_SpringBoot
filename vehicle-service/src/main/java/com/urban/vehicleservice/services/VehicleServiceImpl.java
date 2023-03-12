@@ -24,8 +24,9 @@ public class VehicleServiceImpl implements VehicleService {
     private VehicleMapper vehicleMapper;
 
     @Override
-    public List<Vehicle> listAll() {
-        return vehicleRepos.findAll();
+    public List<VehicleOutputDto> listAll() {
+        return vehicleRepos.findAll()
+                .stream().map(vehicleMapper::fromVehicle).toList();
     }
 
     @Override
@@ -43,17 +44,36 @@ public class VehicleServiceImpl implements VehicleService {
     }
 
     @Override
-    public VehicleOutputDto updateVehicle(Long vehicleId, VehicleInputDto vehicle) throws VehicleNotFoundException, VehicleIdentifyExistException, IncompleteInfos {
-        return null;
+    public VehicleOutputDto updateVehicle(Long vehicleId, VehicleInputDto vehicleDto) throws VehicleNotFoundException, VehicleIdentifyExistException, IncompleteInfos {
+        vehicleRepos.findById(vehicleId)
+                .orElseThrow(() -> new VehicleNotFoundException("Vehicle not found!"));
+
+        if (VehicleUtil.checkVehicleField(vehicleDto))
+            throw new IncompleteInfos("Missing Fields!!!!!");
+
+//        if(vehicleRepos.findVehicleByIdentify(vehicleDto.getIdentify()) != null)
+//            throw new VehicleIdentifyExistException(vehicleDto.getIdentify());
+
+        Vehicle vehicle = VehicleUtil.setVehicleAttribute(vehicleDto, vehicleId);
+        return vehicleMapper.fromVehicle(vehicleRepos.save(vehicle));
     }
 
     @Override
     public VehicleOutputDto searchVehicle(Long vehicleId) throws VehicleNotFoundException {
-        return null;
+        Vehicle vehicle = vehicleRepos.findById(vehicleId).orElse(null);
+
+        if(vehicle == null)
+            throw new VehicleNotFoundException("Vehicle Not Found!");
+
+        return vehicleMapper.fromVehicle(vehicle);
     }
 
     @Override
     public void deleteVehicle(Long vehicleId) throws VehicleNotFoundException {
+        Vehicle vehicle = vehicleRepos.findById(vehicleId).orElse(null);
 
+        if(vehicle == null)
+            throw new VehicleNotFoundException("Vehicle not Found!");
+        else vehicleRepos.delete(vehicle);
     }
 }

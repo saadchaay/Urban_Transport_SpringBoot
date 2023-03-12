@@ -14,6 +14,8 @@ public class VehicleUtil {
 
     public static Vehicle setVehicleAttribute(VehicleInputDto vehicleInputDto, Long id){
         Vehicle vehicle = new Vehicle();
+        if( id != null)
+            vehicle.setId(id);
         vehicle.setName(vehicleInputDto.getName());
         vehicle.setIdentify(vehicleInputDto.getIdentify());
         return vehicle;

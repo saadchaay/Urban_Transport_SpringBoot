@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Objects;
 
 @Service
 @Transactional
@@ -56,7 +57,6 @@ public class TransporterServiceImpl implements TransporterService {
         if(vehicle != null) {
             transporter.setVehicleId(vehicle.getId());
             transporter.setVehicle(vehicle);
-            System.out.println("inside implement trans vehicle");
             kcUtil.createKeycloakTransporterWithRole(transporterDto, transporter.getPassword());
             return transporterMapper.fromTransporterEntity(repository.save(transporter));
         }
@@ -68,10 +68,28 @@ public class TransporterServiceImpl implements TransporterService {
         if (TransporterUtil.checkTransporterFields(transporterDto))
             throw new IncompleteInfos("Missing Fields!!!!!");
 
-        repository.findById(transId)
-                .orElseThrow(() -> new PersonNotFoundException("Transporter not Found"));
+        Transporter oldTr = repository.findById(transId).orElse(null);
+
+        if(oldTr == null)
+            throw new PersonNotFoundException("Transporter not Found");
 
         Transporter transporter = TransporterUtil.setTransportAttributes(transporterDto, transId);
+        Vehicle vehicle = vehClServ.updateVehicle(
+                oldTr.getVehicleId(),
+                transporter.getVehicle());
+
+        if(vehicle != null){
+            System.out.println("-------------- vehicle: "+vehicle);
+            transporter.setVehicleId(vehicle.getId());
+            transporter.setVehicle(vehicle);
+
+            if(!Objects.equals(oldTr.getPassword(), transporter.getPassword()) ||
+                    !Objects.equals(oldTr.getEmail(), transporter.getEmail())){
+                System.out.println("Insert different login info....");
+//            update user keycloak info like password ......
+            }
+        }
+
         return transporterMapper.fromTransporterEntity(repository.save(transporter));
     }
 
@@ -90,6 +108,7 @@ public class TransporterServiceImpl implements TransporterService {
         if(transporter == null)
             throw new PersonNotFoundException("Transporter  not found");
 
+        vehClServ.deleteVehicle(transporter.getVehicleId());
         repository.delete(transporter);
     }
 }

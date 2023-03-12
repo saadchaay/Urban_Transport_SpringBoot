@@ -10,7 +10,7 @@ import com.urban.vehicleservice.exceptions.VehicleNotFoundException;
 import java.util.List;
 
 public interface VehicleService {
-    List<Vehicle> listAll();
+    List<VehicleOutputDto> listAll();
     VehicleOutputDto addVehicle(VehicleInputDto vehicle) throws VehicleIdentifyExistException, IncompleteInfos;
     VehicleOutputDto updateVehicle(Long vehicleId, VehicleInputDto vehicle) throws VehicleNotFoundException, VehicleIdentifyExistException, IncompleteInfos;
     VehicleOutputDto searchVehicle(Long vehicleId) throws VehicleNotFoundException;
