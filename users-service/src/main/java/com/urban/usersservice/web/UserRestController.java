@@ -39,5 +39,16 @@ public class UserRestController {
         return userService.addUser(userDto);
     }
 
+    @PutMapping("{id}")
+    public UserOutputDto update(@PathVariable Long id,
+            @RequestBody UserInputDto userDto) throws PersonFieldExistException, PersonNotFoundException, IncompleteInfos {
+        return userService.updateUser(id, userDto);
+    }
+
+    @DeleteMapping("{id}")
+    public void delete(@PathVariable Long id) throws PersonNotFoundException {
+        userService.deleteUser(id);
+    }
+
 
 }

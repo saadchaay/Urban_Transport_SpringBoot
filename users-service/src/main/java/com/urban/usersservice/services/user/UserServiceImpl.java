@@ -2,6 +2,7 @@ package com.urban.usersservice.services.user;
 
 import com.urban.usersservice.dtos.users.UserInputDto;
 import com.urban.usersservice.dtos.users.UserOutputDto;
+import com.urban.usersservice.entities.Transporter;
 import com.urban.usersservice.entities.User;
 import com.urban.usersservice.exceptions.IncompleteInfos;
 import com.urban.usersservice.exceptions.PersonFieldExistException;
@@ -23,6 +24,7 @@ import java.util.List;
 public class UserServiceImpl implements UserService{
     private UserRepository repository;
     private UserMapper userMapper;
+    private KeycloakUtil kcUtil;
 
     @Override
     public List<UserOutputDto> listAll() {
@@ -41,15 +43,22 @@ public class UserServiceImpl implements UserService{
         if(repository.findByIdentity(userDto.getIdentity()) != null)
             throw new PersonFieldExistException("The identity is already exists!");
 
-        User user = UserUtil.setUserAttributes(userDto);
-        KeycloakUtil.createKeycloakUserWithRole(userDto, user.getPassword());
+        User user = UserUtil.setUserAttributes(userDto, null);
+        kcUtil.createKeycloakUserWithRole(userDto, user.getPassword());
 
         return userMapper.fromUserEntity(repository.save(user));
     }
 
     @Override
-    public UserOutputDto updateUser(Long userId, UserInputDto user) throws IncompleteInfos, PersonFieldExistException, PersonNotFoundException {
-        return null;
+    public UserOutputDto updateUser(Long userId, UserInputDto userDto) throws IncompleteInfos, PersonFieldExistException, PersonNotFoundException {
+        if (UserUtil.checkUserFields(userDto))
+            throw new IncompleteInfos("Missing Fields!!!!!");
+
+        repository.findById(userId)
+                .orElseThrow(() -> new PersonNotFoundException("User not Found"));
+
+        User user = UserUtil.setUserAttributes(userDto, userId);
+        return userMapper.fromUserEntity(repository.save(user));
     }
 
     @Override
@@ -60,6 +69,11 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public void deleteUser(Long userId) throws PersonNotFoundException {
+        User user = repository.findById(userId).orElse(null);
 
+        if(user == null)
+            throw new PersonNotFoundException("User not found");
+
+        repository.delete(user);
     }
 }

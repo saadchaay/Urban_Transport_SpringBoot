@@ -1,6 +1,5 @@
 package com.urban.usersservice.utils;
 
-
 import com.urban.usersservice.dtos.transporter.TransporterInputDto;
 import com.urban.usersservice.dtos.users.UserInputDto;
 import org.keycloak.admin.client.CreatedResponseUtil;
@@ -11,27 +10,52 @@ import org.keycloak.admin.client.resource.UserResource;
 import org.keycloak.representations.idm.CredentialRepresentation;
 import org.keycloak.representations.idm.RoleRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 import javax.ws.rs.core.Response;
 import java.util.List;
 
+@Component
 public class KeycloakUtil {
 
-    public static Keycloak getAdminKeycloakUser() {
+    @Value("${kc.serverUrl}")
+    private String serverUrl;
+//    private String serverUrl = "http://localhost:8080/auth";
+
+    @Value("${kc.realm}")
+    private String realm;
+
+    @Value("${kc.clientId}")
+    private String clientId;
+
+    @Value("${kc.username}")
+    private String username;
+
+    @Value("${kc.password}")
+    private String password;
+
+
+    public Keycloak getAdminKeycloakUser() {
+        System.out.println("------------------------------------------"+serverUrl);
+        System.out.println("------------------------------------------"+realm);
         return KeycloakBuilder.builder()
-                .serverUrl("http://localhost:8080/auth")
+                .serverUrl(serverUrl)
                 .grantType("password")
-                .realm("urban-transport")
-                .clientId("urban-client")
-                .username("full-admin")
-                .password("admin123")
+                .realm(realm)
+                .clientId(clientId)
+                .username(username)
+                .password(password)
                 .build();
     }
-    private static RealmResource getRealm() {
+
+    public RealmResource getRealm() {
         return getAdminKeycloakUser().realm("urban-transport");
     }
 
-    private static void setCredentials(String userId, String password){
+    public void setCredentials(String userId, String password){
         CredentialRepresentation credentialRepresentation = new CredentialRepresentation();
         credentialRepresentation.setTemporary(false);
         credentialRepresentation.setType("password");
@@ -40,13 +64,13 @@ public class KeycloakUtil {
         userResource.resetPassword(credentialRepresentation);
     }
 
-    private static void addTransporterRole(String userId, String assignedRole){
+    public void addTransporterRole(String userId, String assignedRole){
         RoleRepresentation role = getRealm().roles().get(assignedRole).toRepresentation();
         UserResource userResource = getRealm().users().get(userId);
         userResource.roles().realmLevel().add(List.of(role));
     }
 
-    public static void createKeycloakTransporterWithRole(TransporterInputDto trDto, String password){
+    public void createKeycloakTransporterWithRole(TransporterInputDto trDto, String password){
         UserRepresentation tranRepresent = new UserRepresentation();
         tranRepresent.setLastName(trDto.getName());
         tranRepresent.setFirstName(trDto.getName());
@@ -59,7 +83,7 @@ public class KeycloakUtil {
         addTransporterRole(tranId, "TRANSPORTER");
     }
 
-    public static void createKeycloakUserWithRole(UserInputDto userDto, String password){
+    public void createKeycloakUserWithRole(UserInputDto userDto, String password){
         UserRepresentation userRepresentation = new UserRepresentation();
         userRepresentation.setLastName(userDto.getName());
         userRepresentation.setFirstName(userDto.getName());

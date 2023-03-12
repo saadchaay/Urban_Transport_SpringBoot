@@ -25,6 +25,7 @@ public class TransporterServiceImpl implements TransporterService {
     private TransporterRepository repository;
     private TransporterMapper transporterMapper;
     private VehicleRestClientService vehClServ;
+    private KeycloakUtil kcUtil;
 
     @Override
     public List<TransporterOutputDto> listAll() {
@@ -50,22 +51,28 @@ public class TransporterServiceImpl implements TransporterService {
         if(repository.findByIdentity(transporterDto.getIdentity()) != null)
             throw new PersonFieldExistException("The identity is already exists!");
 
-        Transporter transporter = TransporterUtil.setTransportAttributes(transporterDto);
+        Transporter transporter = TransporterUtil.setTransportAttributes(transporterDto, null);
         Vehicle vehicle = vehClServ.addVehicle(transporter.getVehicle());
-
         if(vehicle != null) {
             transporter.setVehicleId(vehicle.getId());
             transporter.setVehicle(vehicle);
             System.out.println("inside implement trans vehicle");
-            KeycloakUtil.createKeycloakTransporterWithRole(transporterDto, transporter.getPassword());
+            kcUtil.createKeycloakTransporterWithRole(transporterDto, transporter.getPassword());
             return transporterMapper.fromTransporterEntity(repository.save(transporter));
         }
         return null;
     }
 
     @Override
-    public TransporterOutputDto updateTransporter(Long transId, TransporterInputDto transporter) throws IncompleteInfos, PersonFieldExistException, PersonNotFoundException {
-        return null;
+    public TransporterOutputDto updateTransporter(Long transId, TransporterInputDto transporterDto) throws IncompleteInfos, PersonFieldExistException, PersonNotFoundException {
+        if (TransporterUtil.checkTransporterFields(transporterDto))
+            throw new IncompleteInfos("Missing Fields!!!!!");
+
+        repository.findById(transId)
+                .orElseThrow(() -> new PersonNotFoundException("Transporter not Found"));
+
+        Transporter transporter = TransporterUtil.setTransportAttributes(transporterDto, transId);
+        return transporterMapper.fromTransporterEntity(repository.save(transporter));
     }
 
     @Override
@@ -78,6 +85,11 @@ public class TransporterServiceImpl implements TransporterService {
 
     @Override
     public void deleteTransporter(Long transId) throws PersonNotFoundException {
+        Transporter transporter = repository.findById(transId).orElse(null);
 
+        if(transporter == null)
+            throw new PersonNotFoundException("Transporter  not found");
+
+        repository.delete(transporter);
     }
 }

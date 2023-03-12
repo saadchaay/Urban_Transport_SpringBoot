@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccc01e41-40d4-4060-be7f-696082634052" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../keycloak-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../keycloak-service/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../users-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/UsersServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/UsersServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/security/KeycloakSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/security/KeycloakSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/services/transporter/TransporterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/services/transporter/TransporterServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/services/user/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/services/user/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/utils/KeycloakUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/utils/KeycloakUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/utils/TransporterUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/utils/TransporterUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/utils/UserUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/utils/UserUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/web/TransporterRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/web/TransporterRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/web/UserRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/web/UserRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../users-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../urbanFrontAngular/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../urbanFrontAngular/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../urbanFrontAngular/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../urbanFrontAngular/src/app/app.module.ts" afterDir="false" />
@@ -52,27 +56,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "extract.method.default.visibility": "private",
-    "jdk.selected.JAVA_MODULE": "openjdk-19 (2)",
-    "last_directory_selection": "C:/Users/ssaad_chaay/Desktop/UrbanTransport_app/server/users-service/src/main/java/com/urban/usersservice/services",
-    "last_opened_file_path": "C:/Users/ssaad_chaay/Desktop/UrbanTransport_app/server/users-service/src/main/java/com/urban/usersservice/dtos/users",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "show.migrate.to.gradle.popup": "false",
-    "spring.configuration.checksum": "d68de4adb8b65e1ccca65cd314d7371a"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-19 (2)&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/ssaad_chaay/Desktop/UrbanTransport_app/server/users-service/src/main/java/com/urban/usersservice/services&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ssaad_chaay/Desktop/UrbanTransport_app/server/users-service/src/main/java/com/urban/usersservice/dtos/users&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;d68de4adb8b65e1ccca65cd314d7371a&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -171,7 +175,8 @@
       <workItem from="1677844480939" duration="12670000" />
       <workItem from="1678022998651" duration="20230000" />
       <workItem from="1678102117761" duration="37201000" />
-      <workItem from="1678266334169" duration="33900000" />
+      <workItem from="1678266334169" duration="37388000" />
+      <workItem from="1678462156115" duration="16789000" />
     </task>
     <servers />
   </component>

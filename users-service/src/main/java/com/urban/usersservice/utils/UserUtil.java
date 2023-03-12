@@ -5,8 +5,10 @@ import com.urban.usersservice.entities.User;
 
 public class UserUtil {
 
-    public static User setUserAttributes(UserInputDto transDto){
+    public static User setUserAttributes(UserInputDto transDto, Long userId){
         User user = new User();
+        if(userId != null)
+            user.setId(userId);
         user.setName(transDto.getName());
         user.setAddress(transDto.getAddress());
         user.setEmail(transDto.getEmail());
