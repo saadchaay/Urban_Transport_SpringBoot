@@ -5,10 +5,12 @@ import com.urban.usersservice.entities.User;
 
 public class UserUtil {
 
-    public static User setUserAttributes(UserInputDto transDto, Long userId){
+    public static User setUserAttributes(UserInputDto transDto, Long userId, String userKcId){
         User user = new User();
         if(userId != null)
             user.setId(userId);
+        if(userKcId != null)
+            user.setKeycloakId(userKcId);
         user.setName(transDto.getName());
         user.setAddress(transDto.getAddress());
         user.setEmail(transDto.getEmail());

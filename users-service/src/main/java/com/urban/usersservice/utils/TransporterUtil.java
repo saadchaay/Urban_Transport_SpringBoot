@@ -9,10 +9,12 @@ import java.util.Optional;
 
 public class TransporterUtil {
 
-    public static Transporter setTransportAttributes(TransporterInputDto transDto, Long transId){
+    public static Transporter setTransportAttributes(TransporterInputDto transDto, Long transId, String kcId){
         Transporter transporter = new Transporter();
         if(transId != null)
             transporter.setId(transId);
+        if(kcId != null)
+            transporter.setKeycloakId(kcId);
         transporter.setName(transDto.getName());
         transporter.setAddress(transDto.getAddress());
         transporter.setEmail(transDto.getEmail());

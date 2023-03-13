@@ -43,10 +43,16 @@ public class UserServiceImpl implements UserService{
         if(repository.findByIdentity(userDto.getIdentity()) != null)
             throw new PersonFieldExistException("The identity is already exists!");
 
-        User user = UserUtil.setUserAttributes(userDto, null);
-        kcUtil.createKeycloakUserWithRole(userDto, user.getPassword());
+        String userKeycloakId = kcUtil.createKeycloakUser(userDto);
 
-        return userMapper.fromUserEntity(repository.save(user));
+        if(userKeycloakId != null){
+            kcUtil.setCredentials(userKeycloakId, userDto.getPassword());
+            kcUtil.addKeycloakUserRole(userKeycloakId, "USER");
+            User user = UserUtil.setUserAttributes(userDto, null, userKeycloakId);
+            return userMapper.fromUserEntity(repository.save(user));
+        }
+//        System.out.println("------ User keycloak id ------------------------: "+userKeycloakId);
+        return null;
     }
 
     @Override
@@ -57,7 +63,7 @@ public class UserServiceImpl implements UserService{
         repository.findById(userId)
                 .orElseThrow(() -> new PersonNotFoundException("User not Found"));
 
-        User user = UserUtil.setUserAttributes(userDto, userId);
+        User user = UserUtil.setUserAttributes(userDto, userId, null);
         return userMapper.fromUserEntity(repository.save(user));
     }
 
@@ -73,7 +79,7 @@ public class UserServiceImpl implements UserService{
 
         if(user == null)
             throw new PersonNotFoundException("User not found");
-
+        kcUtil.deleteKeycloakUser(user.getKeycloakId());
         repository.delete(user);
     }
 }

@@ -52,13 +52,17 @@ public class TransporterServiceImpl implements TransporterService {
         if(repository.findByIdentity(transporterDto.getIdentity()) != null)
             throw new PersonFieldExistException("The identity is already exists!");
 
-        Transporter transporter = TransporterUtil.setTransportAttributes(transporterDto, null);
-        Vehicle vehicle = vehClServ.addVehicle(transporter.getVehicle());
+        Vehicle vehicle = vehClServ.addVehicle(transporterDto.getVehicle());
         if(vehicle != null) {
-            transporter.setVehicleId(vehicle.getId());
-            transporter.setVehicle(vehicle);
-            kcUtil.createKeycloakTransporterWithRole(transporterDto, transporter.getPassword());
-            return transporterMapper.fromTransporterEntity(repository.save(transporter));
+            String transKcId = kcUtil.createKeycloakTransporter(transporterDto);
+            if(transKcId != null){
+                Transporter transporter = TransporterUtil.setTransportAttributes(transporterDto, null, transKcId);
+                kcUtil.setCredentials(transKcId, transporter.getPassword());
+                kcUtil.addKeycloakUserRole(transKcId, "TRANSPORTER");
+                transporter.setVehicleId(vehicle.getId());
+                transporter.setVehicle(vehicle);
+                return transporterMapper.fromTransporterEntity(repository.save(transporter));
+            }
         }
         return null;
     }
@@ -73,7 +77,7 @@ public class TransporterServiceImpl implements TransporterService {
         if(oldTr == null)
             throw new PersonNotFoundException("Transporter not Found");
 
-        Transporter transporter = TransporterUtil.setTransportAttributes(transporterDto, transId);
+        Transporter transporter = TransporterUtil.setTransportAttributes(transporterDto, transId, null);
         Vehicle vehicle = vehClServ.updateVehicle(
                 oldTr.getVehicleId(),
                 transporter.getVehicle());
@@ -108,6 +112,7 @@ public class TransporterServiceImpl implements TransporterService {
         if(transporter == null)
             throw new PersonNotFoundException("Transporter  not found");
 
+        kcUtil.deleteKeycloakUser(transporter.getKeycloakId());
         vehClServ.deleteVehicle(transporter.getVehicleId());
         repository.delete(transporter);
     }

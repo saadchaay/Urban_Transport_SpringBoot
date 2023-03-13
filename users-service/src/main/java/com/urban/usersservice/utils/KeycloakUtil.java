@@ -23,7 +23,6 @@ public class KeycloakUtil {
 
     @Value("${kc.serverUrl}")
     private String serverUrl;
-//    private String serverUrl = "http://localhost:8080/auth";
 
     @Value("${kc.realm}")
     private String realm;
@@ -39,8 +38,6 @@ public class KeycloakUtil {
 
 
     public Keycloak getAdminKeycloakUser() {
-        System.out.println("------------------------------------------"+serverUrl);
-        System.out.println("------------------------------------------"+realm);
         return KeycloakBuilder.builder()
                 .serverUrl(serverUrl)
                 .grantType("password")
@@ -52,7 +49,7 @@ public class KeycloakUtil {
     }
 
     public RealmResource getRealm() {
-        return getAdminKeycloakUser().realm("urban-transport");
+        return getAdminKeycloakUser().realm(realm);
     }
 
     public void setCredentials(String userId, String password){
@@ -64,13 +61,13 @@ public class KeycloakUtil {
         userResource.resetPassword(credentialRepresentation);
     }
 
-    public void addTransporterRole(String userId, String assignedRole){
+    public void addKeycloakUserRole(String userId, String assignedRole){
         RoleRepresentation role = getRealm().roles().get(assignedRole).toRepresentation();
         UserResource userResource = getRealm().users().get(userId);
         userResource.roles().realmLevel().add(List.of(role));
     }
 
-    public void createKeycloakTransporterWithRole(TransporterInputDto trDto, String password){
+    public String createKeycloakTransporter(TransporterInputDto trDto){
         UserRepresentation tranRepresent = new UserRepresentation();
         tranRepresent.setLastName(trDto.getName());
         tranRepresent.setFirstName(trDto.getName());
@@ -78,12 +75,10 @@ public class KeycloakUtil {
         tranRepresent.setEnabled(true);
         tranRepresent.setEmail(trDto.getEmail());
         Response response = getRealm().users().create(tranRepresent);
-        String tranId = CreatedResponseUtil.getCreatedId(response);
-        setCredentials(tranId, password);
-        addTransporterRole(tranId, "TRANSPORTER");
+        return CreatedResponseUtil.getCreatedId(response);
     }
 
-    public void createKeycloakUserWithRole(UserInputDto userDto, String password){
+    public String createKeycloakUser(UserInputDto userDto){
         UserRepresentation userRepresentation = new UserRepresentation();
         userRepresentation.setLastName(userDto.getName());
         userRepresentation.setFirstName(userDto.getName());
@@ -91,9 +86,16 @@ public class KeycloakUtil {
         userRepresentation.setEnabled(true);
         userRepresentation.setEmail(userDto.getEmail());
         Response response = getRealm().users().create(userRepresentation);
-        String userId = CreatedResponseUtil.getCreatedId(response);
-        setCredentials(userId, password);
-        addTransporterRole(userId, "USER");
+        return CreatedResponseUtil.getCreatedId(response);
+    }
+
+    public void updateKeycloakUser(String kcId, UserInputDto userDto){
+
+    }
+
+    public void deleteKeycloakUser(String kcId){
+        UserResource userResource = getRealm().users().get(kcId);
+        userResource.remove();
     }
 
 }

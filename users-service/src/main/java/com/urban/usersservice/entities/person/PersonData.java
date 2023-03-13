@@ -15,6 +15,7 @@ import javax.persistence.MappedSuperclass;
 @SuperBuilder
 public class PersonData {
 
+    private String keycloakId;
     private String name;
     private String email;
     private String phone;
