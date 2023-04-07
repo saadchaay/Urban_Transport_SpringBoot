@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccc01e41-40d4-4060-be7f-696082634052" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/entities/person/PersonData.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/entities/person/PersonData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/services/transporter/TransporterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/services/transporter/TransporterServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/services/user/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/services/user/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/utils/KeycloakUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/utils/KeycloakUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/utils/TransporterUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/utils/TransporterUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway-service/src/main/java/com/urban/gatewayservice/GatewayServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway-service/src/main/java/com/urban/gatewayservice/GatewayServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/UsersServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/UsersServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/utils/UserUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/utils/UserUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../urbanFrontAngular/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../urbanFrontAngular/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../urbanFrontAngular/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../urbanFrontAngular/src/app/app.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +65,10 @@
     &quot;last_directory_selection&quot;: &quot;C:/Users/ssaad_chaay/Desktop/UrbanTransport_app/server/users-service/src/main/java/com/urban/usersservice/services&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/ssaad_chaay/Desktop/UrbanTransport_app/server/users-service/src/main/java/com/urban/usersservice/dtos/users&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;d68de4adb8b65e1ccca65cd314d7371a&quot;
   }
@@ -172,7 +172,9 @@
       <workItem from="1678022998651" duration="20230000" />
       <workItem from="1678102117761" duration="37201000" />
       <workItem from="1678266334169" duration="37388000" />
-      <workItem from="1678462156115" duration="26351000" />
+      <workItem from="1678462156115" duration="29058000" />
+      <workItem from="1679756141098" duration="1051000" />
+      <workItem from="1680702768701" duration="20885000" />
     </task>
     <servers />
   </component>
@@ -189,5 +191,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
