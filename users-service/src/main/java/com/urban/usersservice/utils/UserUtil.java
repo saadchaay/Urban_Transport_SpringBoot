@@ -26,7 +26,7 @@ public class UserUtil {
                 || userDto.getEmail() == null || userDto.getEmail().isEmpty()
                 || userDto.getPhone() == null || userDto.getPhone().isEmpty()
                 || userDto.getAddress() == null || userDto.getAddress().isEmpty()
-                || userDto.getPicture() == null || userDto.getPicture().isEmpty()
+//                || userDto.getPicture() == null || userDto.getPicture().isEmpty()
                 || userDto.getIdentity() == null || userDto.getIdentity().isEmpty()
                 || userDto.getPassword() == null || userDto.getPassword().isEmpty()
         );
