@@ -15,5 +15,6 @@ public interface DeliveryService {
     DeliveryOutputDto updateDelivery(Long deliveryId, DeliveryInputDto user) throws IncompleteInfos, DeliveryFieldExistException, DeliveryNotFoundException;
     DeliveryOutputDto searchDelivery(Long deliveryId) throws DeliveryNotFoundException;
     void deleteDelivery(Long deliveryId) throws DeliveryNotFoundException;
+    List<DeliveryOutputDto> listDeliveriesByTransporter(Long transId);
 
 }
