@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccc01e41-40d4-4060-be7f-696082634052" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway-service/src/main/java/com/urban/gatewayservice/GatewayServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway-service/src/main/java/com/urban/gatewayservice/GatewayServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/UsersServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/UsersServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/utils/UserUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-service/src/main/java/com/urban/usersservice/utils/UserUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/dtos/DeliveryInputDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/dtos/DeliveryOutputDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/exceptions/DeliveryFieldExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/exceptions/DeliveryNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/exceptions/IncompleteInfos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/mappers/DeliveryMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../delivery-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../delivery-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/DeliveryServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/DeliveryServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/entities/Delivery.java" beforeDir="false" afterPath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/entities/Delivery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/repos/DeliveryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/repos/DeliveryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/services/DeliveryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/services/DeliveryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/services/DeliveryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/services/DeliveryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/web/DeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/web/DeliveryController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,30 +57,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-19 (2)&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/ssaad_chaay/Desktop/UrbanTransport_app/server/users-service/src/main/java/com/urban/usersservice/services&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ssaad_chaay/Desktop/UrbanTransport_app/server/users-service/src/main/java/com/urban/usersservice/dtos/users&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;d68de4adb8b65e1ccca65cd314d7371a&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "extract.method.default.visibility": "private",
+    "jdk.selected.JAVA_MODULE": "openjdk-19 (2)",
+    "last_directory_selection": "C:/Users/ssaad_chaay/Desktop/UrbanTransport_app/server/users-service/src/main/java/com/urban/usersservice/services",
+    "last_opened_file_path": "C:/Users/ssaad_chaay/Desktop/UrbanTransport_app/server/delivery-service/src/main/java/com/urban/deliveryservice",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "show.migrate.to.gradle.popup": "false",
+    "spring.configuration.checksum": "d68de4adb8b65e1ccca65cd314d7371a"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -81,16 +89,18 @@
       <recent name="com.urban.usersservice.utils" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ssaad_chaay\Desktop\UrbanTransport_app\server\delivery-service\src\main\java\com\urban\deliveryservice" />
+      <recent name="C:\Users\ssaad_chaay\Desktop\UrbanTransport_app\server\delivery-service" />
       <recent name="C:\Users\ssaad_chaay\Desktop\UrbanTransport_app\server\users-service\src\main\java\com\urban\usersservice\dtos\users" />
       <recent name="C:\Users\ssaad_chaay\Desktop\UrbanTransport_app\server\users-service" />
       <recent name="C:\Users\ssaad_chaay\Desktop\UrbanTransport_app\server\urban-transport\config-repo" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.urban.deliveryservice.services.restClient" />
+      <recent name="com.urban.deliveryservice.models" />
+      <recent name="com.urban.deliveryservice.utils" />
       <recent name="com.urban.usersservice.security" />
       <recent name="com.urban.usersservice.utils" />
-      <recent name="com.urban.usersservice.mappers" />
-      <recent name="com.urban.usersservice.web" />
-      <recent name="com.urban.usersservice.services.user" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -100,7 +110,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UsersServiceApplication">
+  <component name="RunManager" selected="Spring Boot.DeliveryServiceApplication">
     <configuration name="rest-api_1 | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -175,6 +185,8 @@
       <workItem from="1678462156115" duration="29058000" />
       <workItem from="1679756141098" duration="1051000" />
       <workItem from="1680702768701" duration="20885000" />
+      <workItem from="1680860292547" duration="4213000" />
+      <workItem from="1681010386569" duration="10692000" />
     </task>
     <servers />
   </component>

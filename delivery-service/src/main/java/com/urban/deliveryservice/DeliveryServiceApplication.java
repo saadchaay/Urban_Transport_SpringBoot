@@ -24,8 +24,12 @@ public class DeliveryServiceApplication {
 		return args -> {
 			repository.saveAll(List.of(
 					Delivery.builder()
-							.departure("Morocco, Casa")
-							.destination("Germany, FrankFort")
+							.depart("Morocco, Casa")
+							.arrival("Germany, FrankFort")
+							.departCity("Casa")
+							.arrivalCity("frankfurt")
+							.departDate(new Date())
+							.arrivalDate(new Date())
 							.price(2000.21)
 							.build()
 			));

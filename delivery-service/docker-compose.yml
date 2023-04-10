@@ -1,0 +1,20 @@
+version: '3.5'
+
+services:
+  pqldb:
+    image: postgres
+    ports:
+      - "5002:5432"
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: deliveries_db
+    volumes:
+      - deliveries-data:/var/lib/postgresql/data
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8002:8080"
+volumes:
+  deliveries-data:
