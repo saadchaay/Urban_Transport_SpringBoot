@@ -13,7 +13,7 @@ services:
     volumes:
       - keycloak_db:/var/lib/postgresql/data
   kc:
-    image: quay.io/keycloak/keycloak:legacy
+    image: jboss/keycloak:latest
     environment:
       DB_ADDR: db
       DB_VENDOR: POSTGRES
@@ -28,6 +28,12 @@ services:
       - "8080:8080"
     depends_on:
       - db
+    volumes:
+      - ./keywind:/opt/jboss/keycloak/themes/keywind
+    command:
+      - "-Dkeycloak.profile.feature.upload_scripts=enabled"
+      - "-Dkeycloak.theme.import=/opt/jboss/keycloak/themes/keywind"
+      - "-Djboss.modules.system.pkgs=org.jboss.byteman"
   adminer:
     image: adminer
     restart: always

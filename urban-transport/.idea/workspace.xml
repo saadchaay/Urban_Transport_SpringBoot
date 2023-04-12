@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccc01e41-40d4-4060-be7f-696082634052" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../delivery-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/repos/DeliveryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/repos/DeliveryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/services/DeliveryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/services/DeliveryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/services/DeliveryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/services/DeliveryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/web/DeliveryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../delivery-service/src/main/java/com/urban/deliveryservice/web/DeliveryController.java" afterDir="false" />
-    </list>
+    <list default="true" id="ccc01e41-40d4-4060-be7f-696082634052" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +64,7 @@
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "show.migrate.to.gradle.popup": "false",
-    "spring.configuration.checksum": "d68de4adb8b65e1ccca65cd314d7371a"
+    "spring.configuration.checksum": "d7527e05fcf6fc0b12ceb0935e5ff3c0"
   }
 }]]></component>
   <component name="ReactorSettings">
@@ -105,7 +99,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.DeliveryServiceApplication">
+  <component name="RunManager" selected="Docker.users-service: Compose Deployment">
     <configuration name="rest-api | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -159,10 +153,42 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="keycloak-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="../keycloak-service/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="keycloak-service.kc: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="kc" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="../keycloak-service/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="users-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="../users-service/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.rest-api | #1" />
+        <item itemvalue="Docker.users-service: Compose Deployment" />
+        <item itemvalue="Docker.keycloak-service: Compose Deployment" />
+        <item itemvalue="Docker.keycloak-service.kc: Compose Deployment" />
         <item itemvalue="Docker.delivery-service: Compose Deployment" />
+        <item itemvalue="HTTP Request.rest-api | #1" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +213,8 @@
       <workItem from="1680702768701" duration="20885000" />
       <workItem from="1680860292547" duration="4213000" />
       <workItem from="1681010386569" duration="10692000" />
-      <workItem from="1681121548388" duration="5735000" />
+      <workItem from="1681121548388" duration="6419000" />
+      <workItem from="1681290056928" duration="2961000" />
     </task>
     <servers />
   </component>
