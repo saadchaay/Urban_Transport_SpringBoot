@@ -7,6 +7,8 @@ import com.urban.deliveryservice.exceptions.DeliveryNotFoundException;
 import com.urban.deliveryservice.exceptions.IncompleteInfos;
 import com.urban.deliveryservice.services.DeliveryServiceImpl;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,9 +31,14 @@ public class DeliveryController {
     }
 
     @PostMapping
-    public DeliveryOutputDto save(@RequestBody DeliveryInputDto dlDto) throws IncompleteInfos {
+    public Boolean save(@RequestBody DeliveryInputDto dlDto) throws IncompleteInfos {
         System.out.println("inside method");
-        return dlService.addDelivery(dlDto);
+        return dlService.addDelivery(dlDto) != null;
+    }
+
+    @GetMapping("/transporter")
+    public List<DeliveryOutputDto> allByTransporter(@Param("id") String id){
+        return dlService.listDeliveriesByTransporter(Long.valueOf(id));
     }
 
 }

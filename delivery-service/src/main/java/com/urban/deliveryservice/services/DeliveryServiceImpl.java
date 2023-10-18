@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+
 @Service
 @Transactional
 @AllArgsConstructor
@@ -53,5 +54,11 @@ public class DeliveryServiceImpl implements DeliveryService {
     @Override
     public void deleteDelivery(Long deliveryId) throws DeliveryNotFoundException {
 
+    }
+
+    @Override
+    public List<DeliveryOutputDto> listDeliveriesByTransporter(Long transId) {
+        return repository.findDeliveriesByTransporterId(transId)
+                .stream().map(deliveryMapper::fromDeliveryEntity).toList();
     }
 }
